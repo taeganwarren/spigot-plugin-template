@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Spigot-Plugin-Template:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Spigot_Plugin_Template_jar</output-path>
+    <root id="archive" name="Spigot-Plugin-Template.jar">
+      <element id="module-output" name="Spigot-Plugin-Template" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Spigot Jars/spigot-1.14.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

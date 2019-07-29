@@ -1,0 +1,7 @@
+name: Spigot-Plugin-Template
+version: 1.0
+author: team_code
+main: us.team_code.Plugin_Template.Main
+
+commands:
+  Hello:
