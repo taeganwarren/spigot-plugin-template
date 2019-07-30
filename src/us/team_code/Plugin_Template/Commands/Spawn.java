@@ -1,5 +1,6 @@
 package us.team_code.Plugin_Template.Commands;
 
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -15,12 +16,16 @@ public class Spawn implements CommandExecutor {
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
-            player.sendMessage("This is the spawn command!");
+        if (args.length == 0 && sender instanceof Player) {
+            Player p = (Player) sender;
+            World world = p.getWorld();
+            p.teleport(world.getSpawnLocation());
+            p.sendMessage("You have been teleported to the spawn point.");
+            return true;
+        } else {
+            sender.sendMessage("You are unable to use this command.");
             return true;
         }
-        return false;
     }
 
 }

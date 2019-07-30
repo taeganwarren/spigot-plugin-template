@@ -19,6 +19,7 @@ public class Main extends JavaPlugin {
         this.getCommand("feed").setExecutor(new Feed(this));
         this.getCommand("heal").setExecutor(new Heal(this));
         this.getCommand("spawn").setExecutor(new Spawn(this));
+        this.getCommand("setspawn").setExecutor(new SetSpawn(this));
         this.getCommand("fly").setExecutor(new Fly(this));
     }
 

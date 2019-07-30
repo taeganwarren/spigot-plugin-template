@@ -25,8 +25,7 @@ public class Heal implements CommandExecutor {
                 p.setHealth(20.0);
                 p.sendMessage("You have been healed.");
             }
-        }
-        else if (args.length >= 1) {
+        } else if (sender.hasPermission("heal.use") && args.length >= 1 && sender instanceof Player) {
             if (Bukkit.getPlayerExact(args[0]) != null) {
                 Player target = Bukkit.getPlayer(args[0]);
                 if (target.getHealth() == 20.0) {
@@ -41,6 +40,9 @@ public class Heal implements CommandExecutor {
                 sender.sendMessage("Player not found.");
                 return true;
             }
+        } else {
+            sender.sendMessage("You are unable to use this command.");
+            return true;
         }
         return true;
     }

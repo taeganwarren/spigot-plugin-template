@@ -25,8 +25,7 @@ public class Feed implements CommandExecutor {
                 p.setFoodLevel(20);
                 p.sendMessage("You have been fed.");
             }
-        }
-        else if (args.length >= 1) {
+        } else if (sender.hasPermission("feed.use") && args.length >= 1 && sender instanceof Player) {
             if (Bukkit.getPlayerExact(args[0]) != null) {
                 Player target = Bukkit.getPlayer(args[0]);
                 if (target.getFoodLevel() == 20) {
@@ -41,6 +40,9 @@ public class Feed implements CommandExecutor {
                 sender.sendMessage("Player not found.");
                 return true;
             }
+        } else {
+            sender.sendMessage("You are unable to use this command.");
+            return true;
         }
         return true;
     }

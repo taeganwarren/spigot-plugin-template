@@ -7,4 +7,5 @@ commands:
   Feed:
   Heal:
   Spawn:
+  SetSpawn:
   Fly:
