@@ -1,7 +1,1 @@
-Possible commands
-    - Feed
-        - Replenishes food bar
-    - Heal
-        - Replenishes health bar
-    - Spawn
-        - Teleports the player to the spawn point
+
