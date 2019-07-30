@@ -4,4 +4,7 @@ author: team_code
 main: us.team_code.Plugin_Template.Main
 
 commands:
-  Hello:
+  Feed:
+  Heal:
+  Spawn:
+  Fly:
